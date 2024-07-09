@@ -1,4 +1,4 @@
-Name:     K C Arjun
+Name:     K C ARJUN
 Domain:    Java internship
 intern ID:    SMI71929
 Duration :    june 15-August 15-2024
