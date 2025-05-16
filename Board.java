@@ -28,7 +28,7 @@ public class Board extends JPanel implements ActionListener {
 
     private int dots;
     private int apple_x;
-    private int apple_y;
+    private int apple_z;
 
     private boolean leftDirection = false;
     private boolean rightDirection = true;
@@ -87,7 +87,7 @@ public class Board extends JPanel implements ActionListener {
 
     private void doDrawing(Graphics g) {
         if (inGame) {
-            g.drawImage(apple, apple_x, apple_y, this);
+            g.drawImage(apple, apple_x, apple_z, this);
 
             for (int z = 0; z < dots; z++) {
                 if (z == 0) {
@@ -114,7 +114,7 @@ public class Board extends JPanel implements ActionListener {
     }
 
     private void checkApple() {
-        if ((x[0] == apple_x) && (y[0] == apple_y)) {
+        if ((x[0] == apple_x) && (y[0] == apple_z)) {
             dots++;
             locateApple();
         }
@@ -176,7 +176,7 @@ public class Board extends JPanel implements ActionListener {
         apple_x = ((r * DOT_SIZE));
 
         r = (int) (Math.random() * RAND_POS);
-        apple_y = ((r * DOT_SIZE));
+        apple_z = ((r * DOT_SIZE));
     }
 
     @Override
